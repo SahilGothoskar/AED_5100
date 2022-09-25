@@ -73,7 +73,6 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jTextField13 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jTextField14 = new javax.swing.JTextField();
@@ -83,6 +82,16 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTextField16 = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,7 +113,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTable1.setGridColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 40, 780, 370));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 780, 370));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setText("EmployeeID");
@@ -177,10 +186,6 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTextField13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         getContentPane().add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 200, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jButton3.setText("Update");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 640, -1, -1));
-
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton4.setText("Exit");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +193,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 640, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel14.setText("Cell Phone No");
@@ -198,8 +203,8 @@ public class EmployerDatabase extends javax.swing.JFrame {
         getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 200, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel15.setText("Search");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, -1, -1));
+        jLabel15.setText("Cell Phone");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 650, 130, 30));
 
         jTextField15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +217,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jTextField15KeyReleased(evt);
             }
         });
-        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 470, -1));
+        getContentPane().add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 730, 120, 30));
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton5.setText("Add Data");
@@ -221,7 +226,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 640, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 140, -1));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jTextField16.addActionListener(new java.awt.event.ActionListener() {
@@ -238,11 +243,92 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 640, -1, -1));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel16.setText("Email");
         getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 480, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel17.setText("Search With: ");
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 160, 30));
+
+        jTextField17.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField17ActionPerformed(evt);
+            }
+        });
+        jTextField17.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField17KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 650, 260, 30));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel18.setText("Name");
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 690, 80, 30));
+
+        jTextField18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
+        jTextField18.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField18KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 690, 260, 30));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel19.setText(" ID");
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 730, 40, 30));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel20.setText("Start Date");
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 130, 30));
+
+        jTextField19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField19ActionPerformed(evt);
+            }
+        });
+        jTextField19.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField19KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 610, 260, 30));
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel21.setText("Email");
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 570, 70, 30));
+
+        jTextField20.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField20ActionPerformed(evt);
+            }
+        });
+        jTextField20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField20KeyReleased(evt);
+            }
+        });
+        getContentPane().add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 570, 260, 30));
+
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton6.setText("Update");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -278,7 +364,29 @@ private JFrame frame;
     }//GEN-LAST:event_jTextField16ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+ try{
+                String sql ="DELETE from Employ where Employee_ID=? ";
+                pst=conn.prepareStatement(sql);
+                pst.setString(1, jTextField6.getText());
+                pst.execute();
+
+                JOptionPane.showMessageDialog(null,"Record Deleted");
+
+            }catch(Exception e){
+
+                JOptionPane.showMessageDialog(null, e);
+            }finally {
+
+                try{
+                    rs.close();
+                    pst.close();
+
+                }
+                catch(Exception e){
+
+                }
+            }
+                updateTable();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -312,118 +420,7 @@ private JFrame frame;
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jTextField15KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyReleased
- try{
-
-            String sql ="select * from Employ where Name=? ";
-
-            pst=conn.prepareStatement(sql);
-            pst.setString(1,jTextField15.getText());
-            rs=pst.executeQuery();
-
-            String add01 =rs.getString("Employee_ID");
-            jTextField6.setText(add01);
-
-            String add02 =rs.getString("Name");
-            jTextField7.setText(add02);
-
-            String add03 =rs.getString("Age");
-            jTextField8.setText(add03);
-
-            String add04 =rs.getString("Gender");
-            jTextField9.setText(add04);
-
-            String add05 =rs.getString("Start_Date");
-            jTextField10.setText(add05);
-
-            String add07 =rs.getString("Level");
-            jTextField11.setText(add07);
-
-            String add08 =rs.getString("Team_Info");
-            jTextField12.setText(add08);
-
-            String add09 =rs.getString("Position_title");
-            jTextField13.setText(add09);
-
-            String add010 =rs.getString("Cell_Phone");
-            jTextField14.setText(add010);
-            
-            String add011 =rs.getString("Email");
-            jTextField16.setText(add011);
-
-        }
  
- catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
-        }
-        finally {
-
-            try{
-
-                rs.close();
-                pst.close();
-
-            }
-            catch(Exception e){
-                 //JOptionPane.showMessageDialog(null, "No Data");
-            }
-        }
- 
- try{
-
-            String sql ="select * from Employ where Cell_Phone=? ";
-
-            pst=conn.prepareStatement(sql);
-            pst.setString(1,jTextField15.getText());
-            rs=pst.executeQuery();
-
-            String add11 =rs.getString("Employee_ID");
-            jTextField6.setText(add11);
-
-            String add12 =rs.getString("Name");
-            jTextField7.setText(add12);
-
-            String add13 =rs.getString("Age");
-            jTextField8.setText(add13);
-
-            String add14 =rs.getString("Gender");
-            jTextField9.setText(add14);
-
-            String add15 =rs.getString("Start_Date");
-            jTextField10.setText(add15);
-
-            String add17 =rs.getString("Level");
-            jTextField11.setText(add17);
-
-            String add18 =rs.getString("Team_Info");
-            jTextField12.setText(add18);
-
-            String add19 =rs.getString("Position_title");
-            jTextField13.setText(add19);
-
-            String add20 =rs.getString("Cell_Phone");
-            jTextField14.setText(add20);
-            
-            String add21 =rs.getString("Email");
-            jTextField16.setText(add21);
-
-        }
- 
- catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
-        }
-        finally {
-
-            try{
-
-                rs.close();
-                pst.close();
-
-            }
-            catch(Exception e){
-                 //JOptionPane.showMessageDialog(null, "No Data");
-            }
-        }
- /*
  try{
 
             String sql ="select * from Employ where Employee_ID=? ";
@@ -479,8 +476,303 @@ private JFrame frame;
                  //JOptionPane.showMessageDialog(null, "No Data");
             }
         }
-*/ 
+
     }//GEN-LAST:event_jTextField15KeyReleased
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jTextField17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyReleased
+ 
+ try{
+
+            String sql ="select * from Employ where Cell_Phone=? ";
+
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,jTextField17.getText());
+            rs=pst.executeQuery();
+
+            String add1 =rs.getString("Employee_ID");
+            jTextField6.setText(add1);
+
+            String add2 =rs.getString("Name");
+            jTextField7.setText(add2);
+
+            String add3 =rs.getString("Age");
+            jTextField8.setText(add3);
+
+            String add4 =rs.getString("Gender");
+            jTextField9.setText(add4);
+
+            String add5 =rs.getString("Start_Date");
+            jTextField10.setText(add5);
+
+            String add7 =rs.getString("Level");
+            jTextField11.setText(add7);
+
+            String add8 =rs.getString("Team_Info");
+            jTextField12.setText(add8);
+
+            String add9 =rs.getString("Position_title");
+            jTextField13.setText(add9);
+
+            String add10 =rs.getString("Cell_Phone");
+            jTextField14.setText(add10);
+            
+            String add11 =rs.getString("Email");
+            jTextField16.setText(add11);
+
+        }
+ 
+ catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No Data");
+        }
+        finally {
+
+            try{
+
+                rs.close();
+                pst.close();
+
+            }
+            catch(Exception e){
+                 //JOptionPane.showMessageDialog(null, "No Data");
+            }
+        }
+
+    }//GEN-LAST:event_jTextField17KeyReleased
+
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField18ActionPerformed
+
+    private void jTextField18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField18KeyReleased
+ 
+ try{
+
+            String sql ="select * from Employ where Name=? ";
+
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,jTextField18.getText());
+            rs=pst.executeQuery();
+
+            String add1 =rs.getString("Employee_ID");
+            jTextField6.setText(add1);
+
+            String add2 =rs.getString("Name");
+            jTextField7.setText(add2);
+
+            String add3 =rs.getString("Age");
+            jTextField8.setText(add3);
+
+            String add4 =rs.getString("Gender");
+            jTextField9.setText(add4);
+
+            String add5 =rs.getString("Start_Date");
+            jTextField10.setText(add5);
+
+            String add7 =rs.getString("Level");
+            jTextField11.setText(add7);
+
+            String add8 =rs.getString("Team_Info");
+            jTextField12.setText(add8);
+
+            String add9 =rs.getString("Position_title");
+            jTextField13.setText(add9);
+
+            String add10 =rs.getString("Cell_Phone");
+            jTextField14.setText(add10);
+            
+            String add11 =rs.getString("Email");
+            jTextField16.setText(add11);
+
+        }
+ 
+ catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No Data");
+        }
+        finally {
+
+            try{
+
+                rs.close();
+                pst.close();
+
+            }
+            catch(Exception e){
+                 //JOptionPane.showMessageDialog(null, "No Data");
+            }
+        }
+
+    }//GEN-LAST:event_jTextField18KeyReleased
+
+    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19ActionPerformed
+
+    private void jTextField19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyReleased
+ 
+ try{
+
+            String sql ="select * from Employ where Start_Date=? ";
+
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,jTextField19.getText());
+            rs=pst.executeQuery();
+
+            String add1 =rs.getString("Employee_ID");
+            jTextField6.setText(add1);
+
+            String add2 =rs.getString("Name");
+            jTextField7.setText(add2);
+
+            String add3 =rs.getString("Age");
+            jTextField8.setText(add3);
+
+            String add4 =rs.getString("Gender");
+            jTextField9.setText(add4);
+
+            String add5 =rs.getString("Start_Date");
+            jTextField10.setText(add5);
+
+            String add7 =rs.getString("Level");
+            jTextField11.setText(add7);
+
+            String add8 =rs.getString("Team_Info");
+            jTextField12.setText(add8);
+
+            String add9 =rs.getString("Position_title");
+            jTextField13.setText(add9);
+
+            String add10 =rs.getString("Cell_Phone");
+            jTextField14.setText(add10);
+            
+            String add11 =rs.getString("Email");
+            jTextField16.setText(add11);
+
+        }
+ 
+ catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No Data");
+        }
+        finally {
+
+            try{
+
+                rs.close();
+                pst.close();
+
+            }
+            catch(Exception e){
+                 //JOptionPane.showMessageDialog(null, "No Data");
+            }
+        }
+
+    }//GEN-LAST:event_jTextField19KeyReleased
+
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20ActionPerformed
+
+    private void jTextField20KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField20KeyReleased
+ 
+ try{
+
+            String sql ="select * from Employ where Email=? ";
+
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,jTextField20.getText());
+            rs=pst.executeQuery();
+
+            String add1 =rs.getString("Employee_ID");
+            jTextField6.setText(add1);
+
+            String add2 =rs.getString("Name");
+            jTextField7.setText(add2);
+
+            String add3 =rs.getString("Age");
+            jTextField8.setText(add3);
+
+            String add4 =rs.getString("Gender");
+            jTextField9.setText(add4);
+
+            String add5 =rs.getString("Start_Date");
+            jTextField10.setText(add5);
+
+            String add7 =rs.getString("Level");
+            jTextField11.setText(add7);
+
+            String add8 =rs.getString("Team_Info");
+            jTextField12.setText(add8);
+
+            String add9 =rs.getString("Position_title");
+            jTextField13.setText(add9);
+
+            String add10 =rs.getString("Cell_Phone");
+            jTextField14.setText(add10);
+            
+            String add11 =rs.getString("Email");
+            jTextField16.setText(add11);
+
+        }
+ 
+ catch(Exception e){
+            JOptionPane.showMessageDialog(null, "No Data");
+        }
+        finally {
+
+            try{
+
+                rs.close();
+                pst.close();
+
+            }
+            catch(Exception e){
+                 //JOptionPane.showMessageDialog(null, "No Data");
+            }
+        }
+
+    }//GEN-LAST:event_jTextField20KeyReleased
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+
+        try{
+
+                String value1 = jTextField6.getText();
+                String value2 = jTextField7.getText();
+                String value3 = jTextField8.getText();
+                String value4 = jTextField9.getText();
+                String value5 = jTextField10.getText();
+                String value6 = jTextField11.getText();
+                String value7 = jTextField12.getText();
+                String value8 = jTextField13.getText();
+                String value9 = jTextField14.getText();
+                String value10 = jTextField16.getText();
+
+
+                String sql= "UPDATE Employ set Employee_ID='"
+    + value1 + "',Name='" + value2 + "', Age='" + value3 + "', " + "Gender='" + value4 + "',Start_Date='" + value5 + "',Level='" + value6 + "'," + "Team_Info='" + value7 + "',Position_title='" + value8 + "', Cell_Phone = '" + value9 + "', " + "Email = '" + value10 + "', " +  "WHERE Employee_ID='" + value1 + "' ;";
+
+                pst=conn.prepareStatement(sql);
+                pst.execute();
+                JOptionPane.showMessageDialog(null, "Record Updated");
+
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }finally {
+
+                try{
+                    rs.close();
+                    pst.close();
+
+                }
+                catch(Exception e){
+
+                }
+        }
+            //updateTable();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     
 
@@ -556,9 +848,9 @@ private JFrame frame;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -567,6 +859,11 @@ private JFrame frame;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -580,6 +877,10 @@ private JFrame frame;
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
