@@ -7,6 +7,8 @@ import java.sql.*;
 import javax.swing.*;
 import java.text.*; 
 import javax.swing.table.DefaultTableModel;
+import java.io.*;
+import java.awt.*;
 
 /**
  *
@@ -92,6 +94,9 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jTextField20 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        img = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -113,7 +118,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTable1.setGridColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, 780, 370));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 780, 370));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setText("EmployeeID");
@@ -329,6 +334,20 @@ public class EmployerDatabase extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, -1, -1));
+
+        jDesktopPane1.add(img);
+        img.setBounds(10, 10, 140, 130);
+
+        getContentPane().add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 560, 160, 150));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("Attach");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 730, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -752,7 +771,7 @@ private JFrame frame;
 
 
                 String sql= "UPDATE Employ set Employee_ID='"
-    + value1 + "',Name='" + value2 + "', Age='" + value3 + "', " + "Gender='" + value4 + "',Start_Date='" + value5 + "',Level='" + value6 + "'," + "Team_Info='" + value7 + "',Position_title='" + value8 + "', Cell_Phone = '" + value9 + "', " + "Email = '" + value10 + "', " +  "WHERE Employee_ID='" + value1 + "' ;";
+    + value1 + "',Name='" + value2 + "', Age='" + value3 + "', " + "Gender='" + value4 + "',Start_Date='" + value5 + "',Level='" + value6 + "'," + "Team_Info='" + value7 + "',Position_title='" + value8 + "', Cell_Phone = '" + value9 + "', " + "Email = '" + value10 + "' " +  "WHERE Employee_ID='" + value1 + "' ";
 
                 pst=conn.prepareStatement(sql);
                 pst.execute();
@@ -771,8 +790,30 @@ private JFrame frame;
 
                 }
         }
-            //updateTable();
+            updateTable();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFileChooser  chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        
+        filename = f.getAbsolutePath();
+        ImageIcon imageIcon = new ImageIcon (new ImageIcon(filename).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_DEFAULT));
+        img.setIcon(imageIcon);
+        
+        try{
+            File image = new File (filename);
+            FileInputStream fix = new FileInputStream (image);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            byte [] buf = new byte[1024];
+        }
+        catch(Exception e){
+        JOptionPane.showMessageDialog(null,e);
+        
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
 
@@ -848,10 +889,13 @@ private JFrame frame;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel img;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -886,4 +930,9 @@ private JFrame frame;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+private ImageIcon format = null;
+String filename = null;
+byte[] person_image = null;
+
 }
