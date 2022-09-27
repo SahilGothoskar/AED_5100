@@ -409,7 +409,7 @@ private JFrame frame;
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        String sql = "INSERT INTO Employ(Employee_ID,Name,Age,Gender,Start_Date,Level,Team_Info,Position_title,Cell_Phone,Email)VALUES(?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO Employ(Employee_ID,Name,Age,Gender,Start_Date,Level,Team_Info,Position_title,Cell_Phone,Email,Image)VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         
         try 
         {
@@ -424,6 +424,7 @@ private JFrame frame;
             pst.setString(8,jTextField13.getText());
             pst.setString(9,jTextField14.getText());
             pst.setString(10,jTextField16.getText());
+            pst.setBytes(11,person_image);
             
             pst.execute();
             JOptionPane.showMessageDialog(null, "Added data successfully");
@@ -477,11 +478,15 @@ private JFrame frame;
             
             String add11 =rs.getString("Email");
             jTextField16.setText(add11);
+            
+            byte[] image = rs.getBytes("Image");
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
 
         }
  
  catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            //JOptionPane.showMessageDialog(null, "No Data");
         }
         finally {
 
@@ -541,11 +546,15 @@ private JFrame frame;
             
             String add11 =rs.getString("Email");
             jTextField16.setText(add11);
+            
+            byte[] image = rs.getBytes("Image");
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
 
         }
  
  catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            //JOptionPane.showMessageDialog(null, "No Data");
         }
         finally {
 
@@ -605,11 +614,17 @@ private JFrame frame;
             
             String add11 =rs.getString("Email");
             jTextField16.setText(add11);
+            
+                       byte[] image = rs.getBytes("Image");
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
+            
+            
 
         }
  
  catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            //JOptionPane.showMessageDialog(null, "No Data");
         }
         finally {
 
@@ -669,11 +684,15 @@ private JFrame frame;
             
             String add11 =rs.getString("Email");
             jTextField16.setText(add11);
+            
+            byte[] image = rs.getBytes("Image");
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
 
         }
  
  catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            //JOptionPane.showMessageDialog(null, "No Data");
         }
         finally {
 
@@ -733,11 +752,15 @@ private JFrame frame;
             
             String add11 =rs.getString("Email");
             jTextField16.setText(add11);
+            
+            byte[] image = rs.getBytes("Image");
+                ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
+                img.setIcon(imageIcon);
 
         }
  
  catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            //JOptionPane.showMessageDialog(null, "No Data");
         }
         finally {
 
@@ -807,6 +830,13 @@ private JFrame frame;
             FileInputStream fix = new FileInputStream (image);
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             byte [] buf = new byte[1024];
+            
+            for (int number;(number = fix.read(buf))!= -1;){
+                bos.write(buf,0,number);
+            
+            }
+            person_image = bos.toByteArray();
+            
         }
         catch(Exception e){
         JOptionPane.showMessageDialog(null,e);
@@ -831,7 +861,7 @@ private JFrame frame;
         {
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            Object[] columnData = new Object[10];
+            Object[] columnData = new Object[11];
             
             while (rs.next()){
             columnData[0] = rs.getString("Employee_ID");
