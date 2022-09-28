@@ -7,3 +7,11 @@ We can create a new enrty of employee by adding numerous fields like Name,Employ
 We can retreive the data or an entry of an employee by searching for the name,email,cell phone and other unique fields.
 
 3) Update - 
+We can update name,id,start date,title and other fields using update functionality.
+
+4) Delete -
+Delete unnecessary or unwanted data by delete button.
+
+
+
+- Sahil Gothoskar NEUID - 002775631
