@@ -97,6 +97,9 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         img = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,7 +121,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTable1.setGridColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 780, 370));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, 710, 370));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel6.setText("EmployeeID");
@@ -140,6 +143,11 @@ public class EmployerDatabase extends javax.swing.JFrame {
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
+            }
+        });
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
             }
         });
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 200, -1));
@@ -168,6 +176,11 @@ public class EmployerDatabase extends javax.swing.JFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
         jTextField10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField10KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 200, -1));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -198,13 +211,18 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 470, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 420, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel14.setText("Cell Phone No");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
         jTextField14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jTextField14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField14KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 430, 200, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -231,7 +249,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 470, 140, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 420, 140, -1));
 
         jTextField16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jTextField16.addActionListener(new java.awt.event.ActionListener() {
@@ -248,7 +266,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, -1, -1));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 420, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel16.setText("Email");
@@ -333,7 +351,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, -1, -1));
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 420, -1, -1));
 
         jDesktopPane1.add(img);
         img.setBounds(10, 10, 140, 130);
@@ -348,6 +366,15 @@ public class EmployerDatabase extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 730, -1, -1));
+
+        jLabel1.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 150, 20));
+
+        jLabel2.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 140, 20));
+
+        jLabel3.setForeground(new java.awt.Color(255, 0, 51));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, 160, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -845,6 +872,37 @@ private JFrame frame;
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10KeyReleased
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+     char c = evt.getKeyChar();
+     if (Character.isDigit(c)){
+         jTextField7.setEditable(false);
+         
+         jLabel1.setText("Pls enter NAME!");
+     }else
+     {
+     jLabel1.setText(   null);
+     jTextField7.setEditable(true);
+     }
+     
+    }//GEN-LAST:event_jTextField7KeyReleased
+
+    private void jTextField14KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField14KeyReleased
+             char c = evt.getKeyChar();
+     if (Character.isAlphabetic(c)){
+         jTextField14.setEditable(false);
+         
+         jLabel2.setText("Pls enter CellPhone!");
+     }else
+     {
+     jLabel2.setText(null);
+     jTextField14.setEditable(true);
+     }
+    }//GEN-LAST:event_jTextField14KeyReleased
+
     
 
     /**
@@ -926,6 +984,7 @@ private JFrame frame;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -936,8 +995,10 @@ private JFrame frame;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
