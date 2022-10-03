@@ -9,6 +9,8 @@ import java.text.*;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.awt.*;
+import java.util.*;
+import java.util.regex.*;
 
 /**
  *
@@ -54,7 +56,7 @@ public class EmployerDatabase extends javax.swing.JFrame {
             return null;
         }
     }
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -257,6 +259,11 @@ public class EmployerDatabase extends javax.swing.JFrame {
                 jTextField16ActionPerformed(evt);
             }
         });
+        jTextField16.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField16KeyReleased(evt);
+            }
+        });
         getContentPane().add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 480, 200, -1));
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -377,39 +384,39 @@ public class EmployerDatabase extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, 160, 20));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }                                            
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }                                           
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }                                           
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }                                           
 
 private JFrame frame;
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
             frame = new JFrame("Exit");
         if (JOptionPane.showConfirmDialog(frame, "Confirm do you want to exit?", "Employee Management System",
                 JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION);
         {System.exit(0);
         }
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }                                        
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }                                            
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
  try{
                 String sql ="DELETE from Employ where Employee_ID=? ";
                 pst=conn.prepareStatement(sql);
@@ -433,9 +440,9 @@ private JFrame frame;
                 }
             }
                 updateTable();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }                                        
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String sql = "INSERT INTO Employ(Employee_ID,Name,Age,Gender,Start_Date,Level,Team_Info,Position_title,Cell_Phone,Email,Image)VALUES(?,?,?,?,?,?,?,?,?,?,?)";
         
         try 
@@ -464,9 +471,9 @@ private JFrame frame;
                     JOptionPane.showMessageDialog(null,e);
                 }
                     updateTable();
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }                                        
 
-    private void jTextField15KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyReleased
+    private void jTextField15KeyReleased(java.awt.event.KeyEvent evt) {                                         
  
  try{
 
@@ -528,13 +535,13 @@ private JFrame frame;
             }
         }
 
-    }//GEN-LAST:event_jTextField15KeyReleased
+    }                                        
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }                                            
 
-    private void jTextField17KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField17KeyReleased
+    private void jTextField17KeyReleased(java.awt.event.KeyEvent evt) {                                         
  
  try{
 
@@ -596,13 +603,13 @@ private JFrame frame;
             }
         }
 
-    }//GEN-LAST:event_jTextField17KeyReleased
+    }                                        
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }                                            
 
-    private void jTextField18KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField18KeyReleased
+    private void jTextField18KeyReleased(java.awt.event.KeyEvent evt) {                                         
  
  try{
 
@@ -666,13 +673,13 @@ private JFrame frame;
             }
         }
 
-    }//GEN-LAST:event_jTextField18KeyReleased
+    }                                        
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }                                            
 
-    private void jTextField19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyReleased
+    private void jTextField19KeyReleased(java.awt.event.KeyEvent evt) {                                         
  
  try{
 
@@ -734,13 +741,13 @@ private JFrame frame;
             }
         }
 
-    }//GEN-LAST:event_jTextField19KeyReleased
+    }                                        
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }                                            
 
-    private void jTextField20KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField20KeyReleased
+    private void jTextField20KeyReleased(java.awt.event.KeyEvent evt) {                                         
  
  try{
 
@@ -802,9 +809,9 @@ private JFrame frame;
             }
         }
 
-    }//GEN-LAST:event_jTextField20KeyReleased
+    }                                        
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
 
         try{
 
@@ -841,9 +848,9 @@ private JFrame frame;
                 }
         }
             updateTable();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }                                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         JFileChooser  chooser = new JFileChooser();
         chooser.showOpenDialog(null);
         File f = chooser.getSelectedFile();
@@ -870,13 +877,13 @@ private JFrame frame;
         
         }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
-    private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyReleased
+    private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10KeyReleased
+    }                                        
 
-    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {                                        
      char c = evt.getKeyChar();
      if (Character.isDigit(c)){
          jTextField7.setEditable(false);
@@ -888,9 +895,9 @@ private JFrame frame;
      jTextField7.setEditable(true);
      }
      
-    }//GEN-LAST:event_jTextField7KeyReleased
+    }                                       
 
-    private void jTextField14KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField14KeyReleased
+    private void jTextField14KeyReleased(java.awt.event.KeyEvent evt) {                                         
              char c = evt.getKeyChar();
      if (Character.isAlphabetic(c)){
          jTextField14.setEditable(false);
@@ -901,7 +908,20 @@ private JFrame frame;
      jLabel2.setText(null);
      jTextField14.setEditable(true);
      }
-    }//GEN-LAST:event_jTextField14KeyReleased
+    }                                        
+
+    private void jTextField16KeyReleased(java.awt.event.KeyEvent evt) {                                         
+        String PATTERN = "^[a-zA-Z0-9]{0,30}[@][a-zA-Z0-9]{0,10}[.][a-zA-Z]{0,5}$";
+        Pattern patt = Pattern.compile(PATTERN);
+        Matcher match = patt.matcher(jTextField16.getText());
+        if(!match.matches()){
+        jLabel3.setText("Email is Incorrect!!");
+               
+        }
+        else 
+        
+        {jLabel3.setText(null);}
+    }                                        
 
     
 
@@ -976,7 +996,7 @@ private JFrame frame;
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel img;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
@@ -1020,7 +1040,7 @@ private JFrame frame;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 
 private ImageIcon format = null;
 String filename = null;
