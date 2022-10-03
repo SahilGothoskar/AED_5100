@@ -13,7 +13,7 @@ We can update name,id,start date,title and other fields using update functionali
 Delete unnecessary or unwanted data by delete button.
 
 - Validations are present for following fields email,phone no and for name.
-- Able to upload photo and save teh entry.
+- Able to upload photo and save the entry.
 
 
 
