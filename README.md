@@ -12,6 +12,9 @@ We can update name,id,start date,title and other fields using update functionali
 4) Delete -
 Delete unnecessary or unwanted data by delete button.
 
+- Validations are present for following fields email,phone no and for name.
+- Able to upload photo and save teh entry.
+
 
 
 - Sahil Gothoskar NEUID - 002775631
