@@ -880,11 +880,13 @@ private JFrame frame;
     }                                        
 
     private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {                                         
-        // TODO add your handling code here:
+
     }                                        
 
     private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {                                        
-     char c = evt.getKeyChar();
+     
+        
+        char c = evt.getKeyChar();
      if (Character.isDigit(c)){
          jTextField7.setEditable(false);
          
@@ -898,16 +900,28 @@ private JFrame frame;
     }                                       
 
     private void jTextField14KeyReleased(java.awt.event.KeyEvent evt) {                                         
-             char c = evt.getKeyChar();
-     if (Character.isAlphabetic(c)){
-         jTextField14.setEditable(false);
-         
-         jLabel2.setText("Pls enter CellPhone!");
-     }else
-     {
-     jLabel2.setText(null);
-     jTextField14.setEditable(true);
-     }
+        /**
+         char c = evt.getKeyChar();
+        if (Character.isAlphabetic(c)) {
+            jTextField14.setEditable(false);
+
+            jLabel2.setText("Pls enter CellPhone!");
+        } else {
+            jLabel2.setText(null);
+            jTextField14.setEditable(true);
+        }
+        */
+                String PATTERN = "^[0-9]{0,12}$";
+        Pattern patt = Pattern.compile(PATTERN);
+        Matcher match = patt.matcher(jTextField14.getText());
+        if(!match.matches()){
+        jLabel2.setText("Pls enter CellPhone!");
+               
+        }
+        else 
+        
+        {jLabel2.setText(null);}
+        
     }                                        
 
     private void jTextField16KeyReleased(java.awt.event.KeyEvent evt) {                                         
